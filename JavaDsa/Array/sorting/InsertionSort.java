@@ -1,3 +1,4 @@
+package Array.sorting;
 
 public class InsertionSort {
 
