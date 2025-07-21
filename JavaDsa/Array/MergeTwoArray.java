@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class MergeTwoArray {
 
+    /**
+     * TIP ONLY FOR SAME SIZED ARRAY
+     */
     public static int[] mergeArray(int[] a,int[] b){
         int mergedSize = a.length + b.length;
         int[] mergedArray = new int[mergedSize];
