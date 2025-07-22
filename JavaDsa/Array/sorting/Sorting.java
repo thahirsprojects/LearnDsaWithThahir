@@ -92,7 +92,7 @@ public class Sorting {
         int temp = array[a];
         array[a] = array[b];
         array[b] = temp;
-    }
+     }
 
     public static void printArray(int[] arr){
         for (int num : arr){
