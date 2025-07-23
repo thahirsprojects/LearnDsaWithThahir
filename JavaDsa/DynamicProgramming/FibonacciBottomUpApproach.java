@@ -1,10 +1,10 @@
 package DynamicProgramming;
 
-public class FibonachiBottomUpApproach {
+public class FibonacciBottomUpApproach {
 
-    public static int fibonachiButtomUP(int n) {
+    public static int fibonacciBottomUP(int n) {
 
-        int[] copy = new int[n+1]; // fibanachi numbers starts from zero so n+1 size.
+        int[] copy = new int[n+1]; // fibanacci numbers starts from zero so n+1 size.
 
         copy[0] = 0;
         copy[1] = 1;
@@ -17,6 +17,6 @@ public class FibonachiBottomUpApproach {
 
     public static void main(String[] args) {
         int n = 10;
-        System.out.println(fibonachiButtomUP(n));
+        System.out.println(fibonacciBottomUP(n));
     }
 }
