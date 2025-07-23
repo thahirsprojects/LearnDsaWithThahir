@@ -88,6 +88,33 @@ public class Sorting {
         return mergedArray;
     }
 
+    public static void quickSort(int[] arr, int low, int hi){
+        int start = low;
+        int end = hi;
+
+        int pivot=arr[hi];
+
+        if (start>=end) return;
+
+        while(start < end){
+
+            while(arr[start] < pivot){
+                start++;
+            }
+            while(arr[end] > pivot){
+                end--;
+            }
+
+            if (start <= end){
+                swap(arr,start,end);
+                start++;
+                end--;
+            }
+        }
+        quickSort(arr,low,end);
+        quickSort(arr,start,end);
+    }
+
     public static void swap(int[] array, int a, int b){
         int temp = array[a];
         array[a] = array[b];
@@ -103,11 +130,11 @@ public class Sorting {
 
     public static void main(String[] args) {
 
-        int[] array = {0,-563,43,90};
+        int[] arr = {5,2,4,1};
 //        bubbleSort(array);
 //        selectionSort(array);
 //        insertionSort(array);
-        System.out.print("Mergesort: ");
-        mergeSort(array);
+        quickSort(arr,0,arr.length - 1);
+        System.out.println(Arrays.toString(arr));
     }
 }
